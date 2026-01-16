@@ -189,8 +189,35 @@ The TSV file records:
       --error_std_dev 0.05
 ```
 
+## Suggested settings for ONT vs PacBio
+
+### PacBio HiFi–like
+- peak: 13000
+- std_dev: 5000
+- skewness: 3.5
+- error_mean: 0.001
+
+### Oxford Nanopore–like
+- peak: 10000
+- std_dev: 30000
+- skewness: 20
+- error_mean: 0.01
+
 ---
 
 ## Example read length distribution
 
 ![Example read length distribution](images/example_length_distribution.png)
+
+
+## Citation
+
+When using the tool, please cite this GitHub repository. 
+
+@software{syntheticreads,
+  author       = {De Boever, Frederik},
+  title        = {SyntheticReads: Coverage-driven simulation of long-read sequencing data},
+  year         = {2026},
+  url          = {https://github.com/FDBoever/SyntheticReads},
+  version      = {v1.0.0}
+}
