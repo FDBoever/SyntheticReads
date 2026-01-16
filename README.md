@@ -9,7 +9,7 @@
 SyntheticReads (`SyntheticReads.py`) is a Python tool for generating **synthetic long-read sequencing datasets** from multiple reference genomes.  
 It enables reproducible, coverage-driven simulation of long-read data with configurable read length distributions, sequencing error profiles, and support for circular genomes.
 
-The tool is designed for **benchmarking genome assemblers, read mappers, and metagenomic analysis pipelines** using ground-truth datasets.
+The tool is designed for **generating ground-truth datasets** for benchmarking genome assemblers, read mappers, and metagenomic analysis pipelines.
 
 ---
 
