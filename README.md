@@ -188,3 +188,9 @@ The TSV file records:
       --error_mean 0.01 \
       --error_std_dev 0.05
 ```
+
+---
+
+## Example read length distribution
+
+![Example read length distribution](images/example_length_distribution.png)
