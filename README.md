@@ -239,7 +239,21 @@ read_10	ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	U00096.3	22589	9134524	9157
 
 ---
 
-## Example: ONT-like simulation
+## Suggested settings for ONT vs PacBio
+
+### PacBio HiFi–like (default)
+- peak: 13000
+- std_dev: 5000
+- skewness: 3.5
+- error_mean: 0.001
+
+### Oxford Nanopore–like
+- `peak`: 10000
+- `std_dev`: 30000
+- `skewness`: 20
+- `error_mean`: 0.01
+
+### Example: ONT-like simulation
 
 ```
     python SyntheticReads.py \
@@ -253,20 +267,6 @@ read_10	ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	U00096.3	22589	9134524	9157
       --error_mean 0.01 \
       --error_std_dev 0.05
 ```
-
-## Suggested settings for ONT vs PacBio
-
-### PacBio HiFi–like
-- peak: 13000
-- std_dev: 5000
-- skewness: 3.5
-- error_mean: 0.001
-
-### Oxford Nanopore–like
-- peak: 10000
-- std_dev: 30000
-- skewness: 20
-- error_mean: 0.01
 
 ---
 
