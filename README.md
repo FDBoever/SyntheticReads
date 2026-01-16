@@ -4,7 +4,7 @@
 
 ## Description
 
-We developed SyntheticReads (SyntheticReads.py), a Python script for simulating complex synthetic long-read datasets from multiple reference genomes. By enabling bottom-up construction of long-read datasets for mock metagenomes using high-quality genomic sequences, the tool supports controlled benchmarking of genome assemblers, taxonomic profilers, and read mappers.  
+We developed `SyntheticReads` (SyntheticReads.py), a Python script for simulating complex synthetic long-read datasets from multiple reference genomes. By enabling bottom-up construction of long-read datasets for mock metagenomes using high-quality genomic sequences, the tool supports controlled benchmarking of genome assemblers, taxonomic profilers, and read mappers.  
 
 The script accepts a directory of multi-FASTA files as input and supports user-defined relative abundances via a tab-delimited file, facilitating the simulation of uneven community structures reflective of real-world metagenomic samples. 
 
