@@ -156,7 +156,9 @@ The total number of reads is not specified by the user.
 
 For each reference sequence of length L and target coverage C, the number of reads N is computed as:
 
-    N = ceil((C × L) / μ)
+```
+N = ceil((C × L) / μ)
+```
 
 where μ is the mean of the sampled read length distribution.
 
@@ -180,7 +182,9 @@ This allows modeling of asymmetric long-read length profiles typical of modern s
 - Error rates are clipped to the range [0, 1]
 - FASTQ quality scores are computed as:
 
-    Q = -10 × log10(error_rate)
+```
+Q = -10 × log10(error_rate)
+```
 
 - Quality scores are capped at Q50
 - Each read receives a uniform per-base quality score
@@ -261,7 +265,7 @@ If you use SyntheticReads in academic work, please cite the repository as follow
 
     @software{syntheticreads,
       author       = {De Boever, Frederik},
-      title        = {SyntheticReads: Coverage-driven simulation of long-read sequencing data},
+      title        = {SyntheticReads: Simulating synthetic long-read datasets from multi-genome inputs},
       year         = {2026},
       url          = {https://github.com/FDBoever/SyntheticReads},
       version      = {v1.0.0}
