@@ -3,7 +3,7 @@
 ## Simulating synthetic long-read datasets from multi-genome inputs
 
 
-SyntheticReads (`inoa-generate-reads.py`) is a Python tool for generating **synthetic long-read sequencing datasets** from multiple reference genomes.  
+SyntheticReads (`SyntheticReads.py`) is a Python tool for generating **synthetic long-read sequencing datasets** from multiple reference genomes.  
 It enables reproducible, coverage-driven simulation of long-read data with configurable read length distributions, sequencing error profiles, and support for circular genomes.
 
 The tool is designed for **benchmarking genome assemblers, read mappers, and metagenomic analysis pipelines** using ground-truth datasets.
@@ -80,7 +80,7 @@ plasmid.fna	100	        True
 Basic example
 
 ```
-python inoa-generate-reads.py \
+python SyntheticReads.py \
   -i genomes \
   -o output \
   --tsv_file rel.ab.txt \
@@ -177,7 +177,7 @@ The TSV file records:
 ## Example: ONT-like simulation
 
 ```
-    python inoa-generate-reads.py \
+    python SyntheticReads.py \
       -i genomes \
       -o output \
       --tsv_file rel.ab.txt \
