@@ -52,7 +52,8 @@ pip install numpy scipy pandas biopython plotly tabulate
 
 A directory containing one or more FASTA (or multi-FASTA) files.
 
-Example:
+#### Example 1: 
+Simple example for circularised and complete bacterial genomes and plasmid
 
 ```
 genomes/
@@ -61,21 +62,60 @@ genomes/
 └── plasmid.fna
 ```
 
+#### Example 2:
+Simplified Eukaryotic + Bacterial community with nuclear genomes as multi-fasta files (sequence per chromosome), circularised organellar genomes and circularised bacterial genomes
+In this example we compiled two algal genomes Pycnococcus, Dunaiella (nuclear, plastid, mitochondria), the heterotrophic protist Tetramitus (nuclear + mitochondria) and two bacteria E. coli and Pseudomonas.
+
+```
+genomes/
+├── GCA_938743325.2_ucPycProv1.2_genomic_nuclear.fasta
+├── ucPycProv1.2_mitochondrial.fasta
+├── ucPycProv1.2_plastid.fasta
+├── GCA_914767535.2_ucDunPrim2.2_genomic_nuclear.fasta
+├── GCA_938743325.2_ucPycProv1.2_genomic_nuclear.fasta
+├── ucDunPrim2.2_plastid.fasta
+├── GCA_937625935.1_paTetJugo1.1_genomic_nuclear.fasta
+├── paTetJugo1.1_mitochondrial.fasta
+├── ecoli_GCA_000005845.2_ASM584v2_genomic.fasta
+└── NC_002516.2_pseudomonas.fasta
+
+```
+
 ### 2. TSV configuration file
 
 A tab-delimited file specifying coverage depth and circularity for each reference.
 
-Example (`rel.ab.txt`):
+
+#### Example 1:
+
+Simple example for circularised and complete bacterial genomes and plasmid (`rel.ab.txt`):
 
 ```
 fasta_file	coverage	is_circular
 ecoli.fna	30	        True
-paeruginosa.fna	10	    False
+paeruginosa.fna	10	    True
 plasmid.fna	100	        True
 ```
 
+
+#### Example 2:
+
+```
+fasta_file	coverage	is_circular
+GCA_938743325.2_ucPycProv1.2_genomic_nuclear.fasta	30	0
+ucPycProv1.2_mitochondrial.fasta	300	1
+ucPycProv1.2_plastid.fasta	300	1
+GCA_914767535.2_ucDunPrim2.2_genomic_nuclear.fasta	30	0
+ucDunPrim2.2_mitochondrial.fasta	300	1
+ucDunPrim2.2_plastid.fasta	300	1
+GCA_937625935.1_paTetJugo1.1_genomic_nuclear.fasta	30	0
+paTetJugo1.1_mitochondrial.fasta	300	1
+ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	100	1
+NC_002516.2_pseudomonas.fasta	100	1
+```
+
 - coverage defines sequencing depth per reference
-- is_circular should be True or False
+- is_circular should be True or False (or 0 and 1 for False and True, respectively)
 
 
 ## Usage
