@@ -1,5 +1,8 @@
 # SyntheticReads
 
+![Version](https://img.shields.io/badge/version-v1.0.0-blue.svg)
+![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
+
 ## Simulating synthetic long-read datasets from multi-genome inputs
 
 
@@ -209,15 +212,19 @@ The TSV file records:
 
 ![Example read length distribution](images/example_length_distribution.png)
 
+---
+
 
 ## Citation
 
-When using the tool, please cite this GitHub repository. 
+If you use SyntheticReads in academic work, please cite the repository as follows:
 
-@software{syntheticreads,
-  author       = {De Boever, Frederik},
-  title        = {SyntheticReads: Coverage-driven simulation of long-read sequencing data},
-  year         = {2026},
-  url          = {https://github.com/FDBoever/SyntheticReads},
-  version      = {v1.0.0}
-}
+    @software{syntheticreads,
+      author       = {De Boever, Frederik},
+      title        = {SyntheticReads: Coverage-driven simulation of long-read sequencing data},
+      year         = {2026},
+      url          = {https://github.com/FDBoever/SyntheticReads},
+      version      = {v1.0.0}
+    }
+
+
