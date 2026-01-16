@@ -239,7 +239,7 @@ read_10	ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	U00096.3	22589	9134524	9157
 
 ---
 
-## Suggested settings for ONT vs PacBio
+## Suggested settings for PacBio Hifi-like vs ONT-like reads
 
 ### PacBio HiFi–like (default)
 - `peak`: 13000
