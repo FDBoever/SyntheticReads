@@ -204,11 +204,11 @@ Supported use cases include bacterial chromosomes, plasmids, and organellar geno
 
 ## Output Files
 
-For a given prefix <prefix>:
+For a given prefix `<prefix>`:
 
-- `prefix.*.generated_reads.fasta`
-- `prefix.*.generated_reads.fastq`
-- `prefix.*.generated_reads.tsv`
+- `<prefix>.*.generated_reads.fasta`
+- `<prefix>.*.generated_reads.fastq`
+- `<prefix>.*.generated_reads.tsv`
 
 The TSV file records:
 - `sequence_id` = read ID
@@ -221,7 +221,7 @@ The TSV file records:
 - `q_value` = Q-score / Q-value
 
 
-Example output `prefix.*.generated_reads.tsv` allows tracking of origin, read position, error rates and q-value
+Example output `<prefix>.*.generated_reads.tsv` allows tracking of origin, read position, error rates and q-value
 
 ```
 sequence_id	origin	contig	length	start_position	end_position	error_rate	q_value
@@ -242,10 +242,10 @@ read_10	ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	U00096.3	22589	9134524	9157
 ## Suggested settings for ONT vs PacBio
 
 ### PacBio HiFi–like (default)
-- peak: 13000
-- std_dev: 5000
-- skewness: 3.5
-- error_mean: 0.001
+- `peak`: 13000
+- `std_dev`: 5000
+- `skewness`: 3.5
+- `error_mean`: 0.001
 
 ### Oxford Nanopore–like
 - `peak`: 10000
@@ -256,16 +256,16 @@ read_10	ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	U00096.3	22589	9134524	9157
 ### Example: ONT-like simulation
 
 ```
-    python SyntheticReads.py \
-      -i genomes \
-      -o output \
-      --tsv_file rel.ab.txt \
-      --prefix ont_sim \
-      --peak 10000 \
-      --std_dev 30000 \
-      --skewness 20 \
-      --error_mean 0.01 \
-      --error_std_dev 0.05
+python SyntheticReads.py \
+    -i genomes \
+    -o output \
+    --tsv_file rel.ab.txt \
+    --prefix ont_sim \
+    --peak 10000 \
+    --std_dev 30000 \
+    --skewness 20 \
+    --error_mean 0.01 \
+    --error_std_dev 0.05
 ```
 
 ---
