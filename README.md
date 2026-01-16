@@ -279,7 +279,7 @@ python SyntheticReads.py \
 
 ## Citation
 
-If you use SyntheticReads in academic work, please cite the repository as follows:
+If you use `SyntheticReads`, please cite the repository as follows:
 
     @software{syntheticreads,
       author       = {De Boever, Frederik},
