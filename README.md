@@ -206,18 +206,36 @@ Supported use cases include bacterial chromosomes, plasmids, and organellar geno
 
 For a given prefix <prefix>:
 
-- prefix.*.generated_reads.fasta
-- prefix.*.generated_reads.fastq
-- prefix.*.generated_reads.tsv
+- `prefix.*.generated_reads.fasta`
+- `prefix.*.generated_reads.fastq`
+- `prefix.*.generated_reads.tsv`
 
 The TSV file records:
-- Read ID
-- Source FASTA
-- Contig ID
-- Read length
-- Start and end positions
-- Error rate
-- Q-score
+- `sequence_id` = read ID
+- `origin` = source fasta
+- `contig` = contig ID
+- `length` = read length
+- `start_position` = start positions
+- `end_position` = end positions
+- `error_rate` = error rate
+- `q_value` = Q-score / Q-value
+
+
+Example output `prefix.*.generated_reads.tsv` allows tracking of origin, read position, error rates and q-value
+
+```
+sequence_id	origin	contig	length	start_position	end_position	error_rate	q_value
+read_1	ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	U00096.3	15182	891146	906328	0.00030099042821433975	35.21447315169583
+read_2	ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	U00096.3	17384	1375558	1392942	0.0008198373554814663	30.86272297156549
+read_3	ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	U00096.3	17544	8799899	8817443	0.0011524425543655284	29.383807136119348
+read_4	ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	U00096.3	14981	7122179	7137160	0.0008630865798583792	30.63945636186633
+read_5	ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	U00096.3	13140	1742943	1756083	0.0012302222631628392	29.10016417873738
+read_6	ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	U00096.3	21868	342745	364613	0.0005484537828101166	32.60859963743275
+read_7	ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	U00096.3	18425	5783367	5801792	0.00041468117078156247	33.8228568397844
+read_8	ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	U00096.3	14021	2322846	2336867	0.0007948673079313972	30.997053647309123
+read_9	ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	U00096.3	14541	225221	239762	0.0006578514389004098	31.818721710522283
+read_10	ecoli_GCA_000005845.2_ASM584v2_genomic.fasta	U00096.3	22589	9134524	9157113	0.0009428871467543395	30.255402844363832
+```
 
 ---
 
