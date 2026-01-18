@@ -276,7 +276,6 @@ python SyntheticReads.py \
 
 ---
 
-
 ## Citation
 
 If you use `SyntheticReads`, please cite the repository as follows:
